@@ -76,21 +76,22 @@ async def process_logs(request: LogsRequest):
         )
 
         combined = f"""
-#REPORT:
+# REPORT:
 {report}
 
-#state_flow
+# STATE FLOW
 ```mermaid
 {state_flow.replace("\n", """
 """)}
 ```
 
-#INSIGHTS:
+# INSIGHTS:
 {insights}
 
-#SUGESTIONS:
+# SUGESTIONS:
 {suggestions}
 """
+        os.makedirs("output", exist_ok=True)
         x = len(os.listdir("output"))
         file_name = f"output/output{x}.md"
         with open(file_name, 'w', encoding='utf-8') as f:
