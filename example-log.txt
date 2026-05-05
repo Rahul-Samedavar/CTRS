@@ -1,0 +1,143 @@
+12-01-2026 19:00 : Sambhaji Patil opened the Zomato app
+
+12-01-2026 19:00 : Login screen displayed with options (Google, Phone Number)
+
+12-01-2026 19:01 : Sambhaji Patil logged in using Phone Number OTP authentication
+
+12-01-2026 19:01 : Home screen loaded with location set to Belagavi
+
+12-01-2026 19:02 : App displayed restaurant feed with categories (Dining, Delivery, Nightlife)
+
+12-01-2026 19:02 : Promotional banners displayed:
+                     - Flat ₹125 OFF above ₹249 (Code: SAVE125)
+                     - Free Delivery on selected restaurants
+
+12-01-2026 19:03 : Sambhaji Patil scrolled through restaurant list
+
+12-01-2026 19:04 : Sambhaji Patil tapped on search bar
+
+12-01-2026 19:04 : Search query entered: "biryani"
+
+12-01-2026 19:04 : Search results displayed with restaurants serving biryani
+
+12-01-2026 19:05 : Filters opened
+
+12-01-2026 19:05 : Filter applied: Rating 4.0+
+
+12-01-2026 19:06 : Filtered restaurant list displayed
+
+12-01-2026 19:06 : Sambhaji Patil selected Niyaz Hotel, Belagavi
+
+12-01-2026 19:06 : Restaurant page opened
+
+12-01-2026 19:07 : Restaurant details displayed:
+                     - Rating: 4.3
+                     - Delivery Time: 30–35 mins
+                     - Cost for two: ₹400
+
+12-01-2026 19:07 : Menu categories displayed (Recommended, Biryani, Starters, Beverages)
+
+12-01-2026 19:08 : Sambhaji Patil opened "Offers" section
+
+12-01-2026 19:08 : Offers displayed:
+                     - Flat ₹125 OFF above ₹249 (Code: SAVE125)
+                     - 20% OFF up to ₹100 (Auto applied)
+                     - Free Delivery (Pro users)
+
+12-01-2026 19:09 : Sambhaji Patil opened "Biryani" category
+
+12-01-2026 19:09 : Menu items displayed:
+                     - Chicken Biryani ₹220
+                     - Mutton Biryani ₹320
+                     - Family Pack ₹499
+
+12-01-2026 19:10 : Sambhaji Patil selected "Chicken Biryani"
+
+12-01-2026 19:10 : Item details page opened
+
+12-01-2026 19:10 : Sambhaji Patil added "Chicken Biryani" to cart
+
+12-01-2026 19:11 : Add-ons displayed:
+                     - Raita ₹20
+                     - Extra Gravy ₹30
+
+12-01-2026 19:11 : Sambhaji Patil added "Raita" to cart
+
+12-01-2026 19:12 : Cart updated:
+                     - Chicken Biryani ₹220
+                     - Raita ₹20
+                     Total: ₹240
+
+12-01-2026 19:12 : Offer section displayed in cart:
+                     - SAVE125 applicable above ₹249
+
+12-01-2026 19:13 : Sambhaji Patil navigated back to menu
+
+12-01-2026 19:13 : Sambhaji Patil opened "Beverages" category
+
+12-01-2026 19:14 : Menu items displayed:
+                     - Soft Drink ₹40
+                     - Mineral Water ₹20
+
+12-01-2026 19:14 : Sambhaji Patil added "Soft Drink" to cart
+
+12-01-2026 19:15 : Cart updated:
+                     - Chicken Biryani ₹220
+                     - Raita ₹20
+                     - Soft Drink ₹40
+                     Total: ₹280
+
+12-01-2026 19:15 : Sambhaji Patil opened cart
+
+12-01-2026 19:15 : Coupon applied: SAVE125
+
+12-01-2026 19:16 : Cart total updated:
+                     Subtotal: ₹280
+                     Discount: -₹125
+                     Final Total: ₹155
+
+12-01-2026 19:16 : Sambhaji Patil removed "Soft Drink" from cart
+
+12-01-2026 19:17 : Cart updated:
+                     - Chicken Biryani ₹220
+                     - Raita ₹20
+                     Total: ₹240
+
+12-01-2026 19:17 : Coupon SAVE125 removed automatically
+
+12-01-2026 19:18 : Sambhaji Patil added "Soft Drink" to cart again
+
+12-01-2026 19:18 : Cart updated:
+                     Total: ₹280
+
+12-01-2026 19:18 : Coupon SAVE125 applied again
+
+12-01-2026 19:19 : Final payable amount displayed: ₹155
+
+12-01-2026 19:19 : Sambhaji Patil tapped "Proceed to Checkout"
+
+12-01-2026 19:20 : Address selection screen displayed
+
+12-01-2026 19:20 : Selected address: Home, Belagavi
+
+12-01-2026 19:20 : Delivery time displayed: 35 mins
+
+12-01-2026 19:21 : Payment options displayed (UPI, Card, Cash)
+
+12-01-2026 19:21 : Sambhaji Patil selected UPI payment
+
+12-01-2026 19:22 : Payment successful via UPI
+
+12-01-2026 19:22 : Order placed successfully
+
+12-01-2026 19:22 : Order ID generated: ZMT12345678
+
+12-01-2026 19:23 : Order status: Preparing food
+
+12-01-2026 19:40 : Order status: Picked up by delivery partner
+
+12-01-2026 19:55 : Order delivered successfully
+
+12-01-2026 20:05 : Rating screen displayed
+
+12-01-2026 20:05 : Sambhaji Patil submitted rating: 4 stars
