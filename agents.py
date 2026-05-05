@@ -142,9 +142,7 @@ def correction_agent(logs: str, ctr: str, issues: str) -> str:
     return corrected
 
 
-def run_pipeline(log_path: str, output_dir: str = "output") -> None:
-    logs = load_file(log_path)
-
+def run_pipeline(logs: str, output_dir: str = "output") -> str:
     ctr = initial_draft_agent(logs)
     save_file(f"{output_dir}/ctr_draft.md", ctr)
     print(f"  → Saved: {output_dir}/ctr_draft.md")
@@ -173,6 +171,7 @@ def run_pipeline(log_path: str, output_dir: str = "output") -> None:
     # Save final output
     save_file(f"{output_dir}/ctr_final.md", ctr)
     print(f"\n Final CTR saved to: {output_dir}/ctr_final.md")
+    return ctr
 
 
 # ─── ENTRY POINT ───────────────────────────────────────────────────────────────
@@ -190,4 +189,5 @@ if __name__ == "__main__":
     print(f"   Output   : {out_dir}/")
     print(f"   Model    : {MODEL}")
 
-    run_pipeline(log_file, out_dir)
+    logs = load_file(log_file)
+    run_pipeline(logs, out_dir)
