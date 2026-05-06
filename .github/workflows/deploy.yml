@@ -1,30 +1,34 @@
-
-
-name: Deploy to Hugging Face Space
+name: Deploy to HF Space
 
 on:
   push:
-    branches:
-      - main  # change if needed
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Push to Hugging Face
+      - name: Push to Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: "Rahul-Samedavar/CTRS"
         run: |
-          git config --global user.email "rahulsamedavar@gmail.com"
-          git config --global user.name "Rahul-Samedavar"
+          set -euo pipefail
 
-          git clone https://user:$HF_TOKEN@huggingface.co/spaces/Rahul-Samedavar/CTRS space
+          if [ -z "${HF_TOKEN:-}" ] || [ -z "${HF_SPACE:-}" ]; then
+            echo "Missing HF_TOKEN or HF_SPACE secrets."
+            exit 1
+          fi
 
-          cd space
-          git add .
-          git commit -m "Auto deploy from GitHub" || echo "No changes"
-          git push --force
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git remote add hf "https://user:${HF_TOKEN}@huggingface.co/spaces/Rahul-Samedavar/CTRS.git"
+          git push --force hf HEAD:main
