@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi import Body
 from pydantic import BaseModel
 from openai import AsyncOpenAI
 import asyncio
@@ -6,6 +7,10 @@ import json
 import os
 import uuid
 from dotenv import load_dotenv
+from models import ClusterRequest
+
+from utils.filtering import  get_representatives 
+
 
 os.makedirs("output", exist_ok=True)
 
@@ -103,6 +108,29 @@ async def process_logs(request: LogsRequest):
             "insights": insights,
             "state_flow": state_flow,
             "suggestions": suggestions
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+@app.post("/get_representatives")
+def cluster_texts(request: ClusterRequest = Body(...)):
+    if not request.texts or len(request.texts) == 0:
+        raise HTTPException(status_code=400, detail="texts list cannot be empty")
+
+    try:
+        reps = get_representatives(
+            request.texts,
+            request.eps,
+            request.min_samples
+        )
+
+        return {
+            "input_size": len(request.texts),
+            "output_size": len(reps),
+            "representatives": reps
         }
 
     except Exception as e:

@@ -1,2 +1,7 @@
 dotenv
-openai>=1.0.0
+openai
+fastapi
+uvicorn
+requests
+numpy
+scikit-learn
