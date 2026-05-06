@@ -24,12 +24,6 @@ jobs:
 
           git clone https://user:$HF_TOKEN@huggingface.co/spaces/Rahul-Samedavar/CTRS space
 
-          rsync -av --delete \
-            --exclude '.git' \
-            --exclude '.git' \
-            --exclude '.github' \
-            ./ space/ || [ $? -eq 24 ]
-
           cd space
           git add .
           git commit -m "Auto deploy from GitHub" || echo "No changes"
